@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.valorant5.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_habitsFragment"
+            app:destination="@id/habitsFragment"
+            app:enterAnim="@animator/nav_default_enter_anim" />
+        <action
+            android:id="@+id/action_homeFragment_to_galleryaFragment"
+            app:destination="@id/galleryaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/habitsFragment"
+        android:name="com.example.valorant5.HabitsFragment"
+        android:label="fragment_habits"
+        tools:layout="@layout/fragment_agente" >
+        <action
+            android:id="@+id/action_habitsFragment_to_showHabitFragment"
+            app:destination="@id/showHabitFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim" />
+        <action
+            android:id="@+id/action_habitsFragment_to_newHabitFragment"
+            app:destination="@id/newHabitFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showHabitFragment"
+        android:name="com.example.valorant5.ShowHabitFragment"
+        android:label="fragment_show_habit"
+        tools:layout="@layout/viewholder_agente" />
+    <fragment
+        android:id="@+id/newHabitFragment"
+        android:name="com.example.valorant5.NewHabitFragment"
+        android:label="fragment_new_habit"
+        tools:layout="@layout/fragment_new_agent" >
+        <action
+            android:id="@+id/action_newHabitFragment_to_habitsFragment"
+            app:destination="@id/habitsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryaFragment"
+        android:name="com.example.valorant5.GalleryaFragment"
+        android:label="fragment_gallerya"
+        tools:layout="@layout/fragment_gallerya" />
+    <fragment
+        android:id="@+id/habilidadFragment"
+        android:name="com.example.valorant5.HabilidadFragment"
+        android:label="fragment_habilidad"
+        tools:layout="@layout/fragment_habilidad" />
+</navigation>
